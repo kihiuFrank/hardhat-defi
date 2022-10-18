@@ -8,9 +8,9 @@ This repo has been revamped to work with Goerli. Due to AaveV2 not being deploye
 </p>
 <br/>
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/smartcontractkit/hardhat-starter-kit)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/kihiuFrank/hardhat-defi.git)
 
-- [Chainlink Hardhat Starter Kit](#chainlink-hardhat-starter-kit)
+- [Chainlink Hardhat DeFi](#hardhat-defi)
 - [Getting Started](#getting-started)
   - [Requirements](#requirements)
   - [Quickstart](#quickstart)
@@ -238,7 +238,7 @@ If you'd like to run tests or on a network that is a [forked network](https://ha
 
 ## Auto-Funding
 
-This Starter Kit is configured by default to attempt to auto-fund any newly deployed contract that uses Any-API, to save having to manually fund them after each deployment. The amount in LINK to send as part of this process can be modified in the [helper hardhat Config](helper-hardhat-config.js), and are configurable per network.
+This project is configured by default to attempt to auto-fund any newly deployed contract that uses Any-API, to save having to manually fund them after each deployment. The amount in LINK to send as part of this process can be modified in the [helper hardhat Config](helper-hardhat-config.js), and are configurable per network.
 
 | Parameter  | Description                                       | Default Value |
 | ---------- | :------------------------------------------------ | :------------ |
