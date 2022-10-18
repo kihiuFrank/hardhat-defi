@@ -1,4 +1,6 @@
 <br/>
+This repo has been revamped to work with Goerli. Due to AaveV2 not being deployed on Goerli, it may not work as intended. Please use a mainnet-fork or local network instead of a testnet.
+<br>
 <p align="center">
 <a href="https://chain.link" target="_blank">
 <img src="./box-img-lg.png" width="225" alt="Chainlink Hardhat logo">
@@ -37,7 +39,7 @@
 - [Thank You!](#thank-you)
   - [Resources](#resources)
 
-# Chainlink Hardhat Starter Kit
+# Hardhat DeFi
  Implementation of the following 4 Chainlink features using the [Hardhat](https://hardhat.org/) development environment:
  - [Chainlink Price Feeds](https://docs.chain.link/docs/using-chainlink-reference-contracts)
  - [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf)
@@ -69,12 +71,17 @@ It's recommended that you've gone through the [hardhat getting started documenta
 After installing all the requirements, run the following:
 
 ```bash
-git clone https://github.com/smartcontractkit/hardhat-starter-kit/
-cd hardhat-starter-kit
+git clone https://github.com/kihiuFrank/hardhat-defi.git
+cd hardhat-defi
 ```
 Then:
 ```
-npm install
+npm install 
+```
+or 
+
+```
+yarn
 ```
 
 The recommendation is to use npm 7 or later. If you are using an older version of npm, you'll also need to install all the packages used by the toolbox.
@@ -211,7 +218,7 @@ npm run deploy --network goerli
 
 To run staging testnet tests
 ```
-npm run test-staging
+npm run test-staging or yarn run test-staging 
 ```
 
 ## Forking 
@@ -231,7 +238,7 @@ If you'd like to run tests or on a network that is a [forked network](https://ha
 
 ## Auto-Funding
 
-This Starter Kit is configured by default to attempt to auto-fund any newly deployed contract that uses Any-API, to save having to manually fund them after each deployment. The amount in LINK to send as part of this process can be modified in the [Starter Kit Config](helper-hardhat-config.js), and are configurable per network.
+This Starter Kit is configured by default to attempt to auto-fund any newly deployed contract that uses Any-API, to save having to manually fund them after each deployment. The amount in LINK to send as part of this process can be modified in the [helper hardhat Config](helper-hardhat-config.js), and are configurable per network.
 
 | Parameter  | Description                                       | Default Value |
 | ---------- | :------------------------------------------------ | :------------ |
@@ -371,6 +378,15 @@ This will [lint](https://stackoverflow.com/questions/8503559/what-is-linting) yo
 ```
 npm run lint:fix
 ```
+or
+```
+yarn lint:fix
+```
+
+To check linting / code formatting:
+```
+yarn lint
+```
 
 # Code Formatting
 
@@ -378,6 +394,11 @@ This will format both your javascript and solidity to look nicer.
 
 ```
 npm run format
+```
+or
+
+```
+yarn format
 ```
 
 # Estimating Gas
@@ -421,7 +442,7 @@ exit
 
 # Contributing
 
-Contributions are always welcome! Open a PR or an issue!
+Contributions are always welcome! 
 
 # Thank You!
 
@@ -429,3 +450,7 @@ Contributions are always welcome! Open a PR or an issue!
 
 - [Chainlink Documentation](https://docs.chain.link/)
 - [Hardhat Documentation](https://hardhat.org/getting-started/)
+
+[![Frankline Kihiu Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/frankline_kihiu)
+[![Frankline Kihiu Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/frankline-m-kihiu)
+[![Frankline Kihiu Medium](https://img.shields.io/badge/Medium-000000?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@franklinekihiu)
