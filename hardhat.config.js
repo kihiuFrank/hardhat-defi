@@ -33,6 +33,9 @@ module.exports = {
             {
                 version: "0.4.24",
             },
+            {
+                version: "0.4.19",
+            },
         ],
     },
     networks: {
@@ -97,10 +100,10 @@ module.exports = {
         ],
     },
     paths: {
-    sources: "./contracts",
-    tests: "./test",
-    cache: "./build/cache",
-    artifacts: "./build/artifacts"
+        sources: "./contracts",
+        tests: "./test",
+        cache: "./build/cache",
+        artifacts: "./build/artifacts",
     },
     mocha: {
         timeout: 200000, // 200 seconds max for running tests
