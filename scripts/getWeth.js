@@ -4,7 +4,7 @@ async function getWeth() {
     const { deployer } = await getNamedAccounts()
     // call the "deposit" function on the weth contract
     // we need abi , contract address
-    // 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+    // 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2 (WETH address on etherscan)
     const iWeth = await ethers.getContractAt(
         "IWeth",
         "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
