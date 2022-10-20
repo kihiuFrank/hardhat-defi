@@ -18,6 +18,7 @@
   - [Run a Local Network](#run-a-local-network)
   - [Using a Testnet or Live Network (like Mainnet or Polygon)](#using-a-testnet-or-live-network-like-mainnet-or-polygon)
     - [Goerli Ethereum Testnet Setup](#goerli-ethereum-testnet-setup)
+  - [Forking](#forking)
 - [Test](#test)
 - [Interacting with Deployed Contracts](#interacting-with-deployed-contracts)
   - [Verify on Etherscan](#verify-on-etherscan)
@@ -200,6 +201,20 @@ yarn hardhat deploy --network goerli
 To run staging testnet tests
 ```
 yarn hardhat test --network goerli
+```
+
+## Forking 
+ 
+If you'd like to run tests or on a network that is a [forked network](https://hardhat.org/hardhat-network/guides/mainnet-forking.html)
+1. Set a `MAINNET_RPC_URL` environment variable that connects to the mainnet.
+2. Choose a block number to select a state of the network you are forking and set it as `FORKING_BLOCK_NUMBER` environment variable. If ignored, it will use the latest block each time which can lead to test inconsistency.
+3. Set `enabled` flag to `true`/`false` to enable/disable forking feature
+```
+      forking: {
+        url: MAINNET_RPC_URL,
+        blockNumber: FORKING_BLOCK_NUMBER,
+        enabled: false,
+      }
 ```
 
 # Test
