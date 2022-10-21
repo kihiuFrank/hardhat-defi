@@ -40,6 +40,20 @@ async function main() {
     const daiTokenAddress = "0x6B175474E89094C44Da98b954EedeAC495271d0F"
     await borrowDai(daiTokenAddress, lendingPool, amountDaiToBorrowWei, deployer)
     await getBorrowUserData(lendingPool, deployer)
+
+    //repay
+    await repay(amountDaiToBorrowWei, daiTokenAddress, lendingPool, deployer)
+    await getBorrowUserData(lendingPool, deployer)
+}
+
+// Amount to repay, dai address we are going to repay, the lendingPool and account.
+async function repay(amount, daiAddress, lendingPool, account) {
+    // we need to first approve sending our DAI back to aave.
+    await approveErc20(daiAddress, lendingPool.address, amount, account)
+    //sending it back
+    const repayTx = await lendingPool.repay(daiAddress, amount, 1, account)
+    await repayTx.wait(1)
+    console.log("Repaid!")
 }
 
 async function borrowDai(daiAddress, lendingPool, amountDaiToBorrowWei, account) {
